@@ -1,7 +1,7 @@
 # cs229
 ### Lecture Dates
 
-- **Lecture 1:** 6/12
+- ~~**Lecture 1:** 6/12~~
 - **Lecture 2:** 6/14
 - **Lecture 3:** 6/16
 - **Lecture 4:** 6/18
