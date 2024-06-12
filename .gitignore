@@ -1,3 +1,7 @@
 # ignore all ds_store files in all directory
-
 **/.DS_Store
+
+# ignore all tex-related files in all dire
+**/*.aux
+**/*.log
+**/*.gz
