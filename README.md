@@ -22,7 +22,7 @@
 
 ### Assignment Dates
 
-- **A0 Release:** 6/12, Due 6/18
+- ~~**A0 Release:** 6/12, Due 6/18~~
 - **A1 Release:** 6/18, Due 6/26
 - **A2 Release:** 6/26, Due 7/4
 - **A3 Release:** 7/4, Due 7/12

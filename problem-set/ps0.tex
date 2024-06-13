@@ -1,0 +1,245 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{color}
+\linespread{1.3}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+
+\title{\bf{Problem Set 0}}
+\author{Jonathan Qin}
+\begin{document}
+\maketitle
+
+
+\section{Gradients and Hessians}
+\begin{enumerate}
+
+
+\item[(a)]
+Let $f(x) = \frac{1}{2}x^{T}Ax + b^{T}x$, where $A$ is a symmetric matrix and $b \in \R^{n}$ is a vector. What is $\nabla f(x)$?
+
+\color{blue}
+$\nabla f(x) = \nabla(\frac{1}{2}x^{T}Ax) + \nabla (b^{T}).$
+Let $m(x) = x^{T}Ax$, $n(x) = b^{T}x$
+\begin{equation*}
+\begin{aligned}
+		m(x) &= \sum_{i=1}^n \sum_{j=1}^n x_{i}A_{ij}x_{j}\\
+		n(x) &= \sum_{i=1}^n b_i x_i
+\end{aligned}
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
+	\frac{\partial}{\partial x_{k}} (x^{T}Ax) &= \frac{\partial}{\partial x_{k}} (\sum_{i=1}^n \sum_{j=1}^n x_{i}A_{ij}x_{j}) \\
+     &= \sum_{i=1}^n \sum_{j=1}^n (\frac{\partial x_{i}}{\partial x_{k}}A_{ij}x_{j} + x_{i}A_{ij} \frac{\partial x_{j}}{x_{k}}) \\
+     &= \sum_{j=1}^n A_{kj}{x_j} + \sum_{i=1}^n x_{i}A_{ik} \: (\frac{\partial x_i}{\partial x_k} = \delta_{ik} \text{,  Kronecker delta, is 1 if $i = k$, 0 otherwise)} \\
+     &= 2 \sum_{i = 1}^n A_{ki}{x_i} \: (A \text { is symmetric, } A_{ij} = A_{ji}) \\
+     &= 2 Ax \\
+	\frac{\partial} {\partial x_k}(b^{T}x) &= \frac{\partial} {\partial x_k} (\sum_{i=1}^n b_i x_i) \\
+	&= b
+\end{aligned}
+\end{equation*}
+Hence, $\nabla f(x) = \frac{1}{2} \cdot 2Ax + b = Ax+b$
+\color{black}
+
+\item[(b)]
+Let $f(x) = g(h(x))$,where $g:\R \rightarrow \R$ is differentiable and $h: \R ^{n} \rightarrow \R$ is differentiable. What is $\nabla f(x)$?
+
+\color{blue}
+Chain rule: 
+\begin{equation*}
+	\begin{aligned}
+		\frac{\partial g(h(x))}{\partial x_i} &= \frac{\partial g(h(x))}{\partial h(x)} \frac{\partial h(x)}{\partial x_i} \\
+&= g'(h(x)) \frac{\partial h(x)}{\partial x_i} 
+\nabla f(x) &= \nabla g(h(x)) = g'(h(x)) \nabla h(x)
+	\end{aligned}
+\end{equation*}
+
+\color{black}
+
+\item[(c)]
+Let $f(x) = \frac{1}{2}x^{T}Ax + b^{T}x$, where $A$ is symmetric and $b \in \R^{n}$ is a vector. what is $\nabla ^{2} f(x)?$
+
+\color{blue}
+\begin{equation*}
+\begin{aligned}
+	\nabla ^2 f(x) &= \nabla(Ax+b)\\
+	&= [\frac{\partial}{\partial x_1}f(x) \frac{\partial}{\partial x_2}f(x) \cdots \frac{\partial}{\partial x_n}f(x)] \\
+	&= \begin{bmatrix}
+A_{11} & A_{12} & \dots & A_{1n} \\
+A_{21} & A_{22} & \dots & A_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+A_{n1} & A_{n2} & \dots & A_{nn}
+\end{bmatrix} = A
+\end{aligned}	
+\end{equation*}
+
+\color{black}
+
+\item[(d)]
+Let $f(x) = g(a^{T}x)$, where $g:\R \rightarrow \R$ is continuously differentiable and $a \in \R^{n}$ is a vector. What are $\nabla f(x)$ and $\nabla ^{2} f(x)$?
+
+\color{blue}
+\begin{equation*}
+	\begin{aligned}
+		\nabla f(x) &= \nabla g(a^T x) \\
+		&= g'(a^T x) \cdot \nabla (a^T x) \; (a^T x = \sum_{i=1}^n a_i x_i)    \\
+		&= g'(a^T x) \cdot a
+	\end{aligned}
+\end{equation*}
+
+\begin{equation*}
+	\begin{aligned}
+\frac{\partial^2 g(h(x))}{\partial x_i \partial x_j} &= \frac{\partial^2 g(h(x))}{\partial (h(x))^2} \frac{\partial h(x)}{\partial x_i} \frac{\partial h(x)}{\partial x_j} = g''(h(x))\frac{\partial h(x)}{\partial x_i}\frac{\partial h(x)}{\partial x_j} \\
+\frac{\partial^2 g(a^T x)}{\partial x_i \partial x_j} &= g''(a^T x)\frac{\partial (a^T x)}{\partial x_i}\frac{\partial (a^T x)}{\partial x_j} = g''(a^T x)a_i a_j \\
+\nabla^2 f(x) &= \nabla^2 g(a^T x) = g''(a^T x) 
+\begin{bmatrix}
+a_1 a_1 & a_1 a_2 & \dots & a_1 a_n \\
+a_2 a_1 & a_2 a_2 & \dots & a_2 a_n \\
+\vdots & \vdots & \ddots & \vdots \\
+a_n a_1 & a_n a_2 & \dots & a_n a_n
+\end{bmatrix} = g''(a^T x)aa^T
+	\end{aligned}
+\end{equation*}
+\color{black}
+
+\end{enumerate}
+
+\section{Positive definite matrices}
+
+\begin{enumerate}
+
+	\item[(a)] 
+		Let $z \in \R ^n$ be an n-vector. Show that $A = zz^T$ is positive semidefinite.
+		\color{blue}
+		\begin{flalign*}
+					&A^T = (zz^T)^T = (z^T)^Tz^T = zz^T = A&\\
+			&x^Tzz^Tx = x^Tz(x^Tz)^T=(x^Tz)^2>=0 	&
+		\end{flalign*}
+		
+		\color{black}
+		
+	\item[(b)] 
+		Let $z \in \R ^n$ be a non-zero n-vector. Let $A = zz^T$. What is the null-space of $A$? What is the rank of $A$?
+		\color{blue}
+		\begin{flalign*}
+			&Ax = 0  \rightarrow zz^Tx=0     &\\
+			&\text{Since z is a non-zero vector}, z^Tx=0, Null(A) = \{ x \in \R^n : x^Tz = 0 \} &\\
+			&Rank(A) = 1 \text{. It is the number of independent columns, which in this case, all columns are}\\
+			&\text{a multiple of $z$.}&
+		\end{flalign*}
+		
+		\color{black}
+		
+	\item[(c)] 
+		Let $A \in \R ^{n \times n}$ be positive semidefinite and $B \in \R ^{m \times n}$ be arbitrary, where $m, n \in \N$. Is $BAB^T $ PSD? If so, prove it. If not, give a counterexample with explicit $A, B$.
+		\color{blue}
+		\begin{flalign*}
+			&Proof:&\\ 
+			&(BAB^T)^T = (B^T)^TA^TB^T = BAB^T (\text{since $A$ is symmetric})&\\
+			&x^TBAB^Tx = (x^TB) A (x^TB)^T \geq 0&
+		\end{flalign*}
+			
+		\color{black}
+		
+\end{enumerate}
+
+\section{Eigenvectors, eigenvalues, and the spectral theorem}
+
+\begin{enumerate}
+	\item[(a)]
+Suppose that the matrix $A \in \mathbb{R}^{n \times n}$ is diagonalizable, that is, $A = T \Lambda T^{-1}$ for an invertible matrix $T \in \mathbb{R}^{n \times n}$, where $\Lambda = \text{diag}(\lambda_1, \ldots, \lambda_n)$ is diagonal. Use the notation $t^{(i)}$ for the columns of $T$, so that $T = \left[ t^{(1)} \ \cdots \ t^{(n)} \right]$, where $t^{(i)} \in \mathbb{R}^n$. Show that $A t^{(i)} = \lambda_i t^{(i)}$, so that the eigenvalues/eigenvector pairs of $A$ are $(t^{(i)}, \lambda_i)$
+\newline
+\newline
+\newline
+\newline
+
+
+\color{blue}
+\begin{equation*}
+				A=T \Lambda T^{-1}, AT = \Lambda T 
+\end{equation*}
+
+\begin{equation*}
+	\begin{aligned}
+				A [t^{(1)}, t^{(2)}, \dots, t^{(n)}] = [t^{(1)}, t^{(2)}, \dots, t^{(n)}] * \begin{bmatrix}
+\lambda_1 & 0 & \dots & 0 \\
+0 & \lambda_2 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \dots & \lambda_n \\
+\end{bmatrix} \\
+[At^{(1)}, At^{(2)}, \dots, At^{(n)}] = [\lambda_1 t^{(1)}, \lambda_2 t^{(2)}, \dots, \lambda_n t^{(n)}]
+	\end{aligned}
+\end{equation*}
+\begin{equation*}
+	At^{(i)} = \lambda_i t^{(i)}
+\end{equation*}
+
+
+
+%
+\color{black}
+\item[(b)] Let $A$ be symmetric. Show that if $U = \left[ u^{(1)} \ \cdots \ u^{(n)} \right]$ is orthogonal, where $u^{(i)} \in \mathbb{R}^n$ and $A = U \Lambda U^T$, then $u^{(i)}$ is an eigenvector of $A$ and $A u^{(i)} = \lambda_i u^{(i)}$, where $\Lambda = \text{diag}(\lambda_1, \ldots, \lambda_n)$.
+
+\color{blue}
+
+\begin{align*}
+AU &= U \Lambda U^T U = U \Lambda \\
+A \begin{bmatrix}
+    u^{(1)} & u^{(2)} & \cdots & u^{(n)}
+\end{bmatrix} &= \begin{bmatrix}
+    u^{(1)} & u^{(2)} & \cdots & u^{(n)}
+\end{bmatrix} \begin{bmatrix}
+    \lambda_1 & 0 & \cdots & 0 \\
+    0 & \lambda_2 & \cdots & 0 \\
+    \vdots & \vdots & \ddots & \vdots \\
+    0 & 0 & \cdots & \lambda_n
+\end{bmatrix} \\
+\begin{bmatrix}
+    Au^{(1)} & Au^{(2)} & \cdots & Au^{(n)}
+\end{bmatrix} &= \begin{bmatrix}
+    \lambda_1 u^{(1)} & \lambda_2 u^{(2)} & \cdots & \lambda_n u^{(n)}
+\end{bmatrix} \\
+A u^{(i)} &= \lambda_i u^{(i)}
+\end{align*}
+
+\color{black}
+\item[(c)] Show that if $A$ is PSD, then $\lambda_i(A) \geq 0$ for each $i$.
+\color{blue}
+\begin{equation*}
+	\begin{aligned}
+		At^{(i)} &= \lambda _i t ^ {(i)}\\
+		(t^(i))^TAt^{(i)} &= \lambda _i  || t^{(i)} ||_2  = \lambda _i \geq 0
+	\end{aligned}
+\end{equation*}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
