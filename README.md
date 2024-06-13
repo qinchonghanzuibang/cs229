@@ -30,7 +30,7 @@
 
 ### Section Dates
 
-- **Section 1:** 6/13 - Linear Algebra
+- ~~**Section 1:** 6/13 - Linear Algebra~~
 - **Section 2:** 6/16 - Probability
 - **Section 3:** 6/19 - Python
 - **Section 4:** 6/22 - Learning Theory
