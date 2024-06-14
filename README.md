@@ -1,4 +1,4 @@
-# cs229
+# CS229 Machine Learning
 Sources could be found in this [repo](https://github.com/maxim5/cs229-2018-autumn). 
 
 ### Lecture Dates
