@@ -4,7 +4,7 @@ Sources could be found in this [repo](https://github.com/maxim5/cs229-2018-autum
 ### Lecture Dates
 
 - ~~**Lecture 1:** 6/12~~  Introduction and Basic Concepts
-- **Lecture 2:** 6/14  Supervised Learning Setup. Linear Regression.
+- ~~**Lecture 2:** 6/14~~  Supervised Learning Setup. Linear Regression.
 - **Lecture 3:** 6/16  Weighted Least Squares. Logistic Regression.
 - **Lecture 4:** 6/18  Newton's Method. Perceptron. Exponential Family. Generalized Linear Models.
 - **Lecture 5:** 6/20  Gaussian Discriminant Analysis. Naive Bayes.
