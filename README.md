@@ -1,24 +1,26 @@
 # cs229
 ### Lecture Dates
 
-- ~~**Lecture 1:** 6/12~~
-- **Lecture 2:** 6/14
-- **Lecture 3:** 6/16
-- **Lecture 4:** 6/18
-- **Lecture 5:** 6/20
-- **Lecture 6:** 6/22
-- **Lecture 7:** 6/24
-- **Lecture 8:** 6/26
-- **Lecture 9:** 6/28
-- **Lecture 10:** 6/30
-- **Lecture 11:** 7/2
-- **Lecture 12:** 7/4
-- **Lecture 13:** 7/6
-- **Lecture 14:** 7/8
-- **Lecture 15:** 7/10
-- **Lecture 16:** 7/12
-- **Lecture 17:** 7/14
-- **Lecture 18:** 7/15
+- ~~**Lecture 1:** 6/12 - Introduction and Basic Concepts~~
+- **Lecture 2:** 6/14 - Supervised Learning Setup. Linear Regression.
+- **Lecture 3:** 6/16 - Weighted Least Squares. Logistic Regression.
+- **Lecture 4:** 6/18 - Newton's Method. Perceptron. Exponential Family. Generalized Linear Models.
+- **Lecture 5:** 6/20 - Gaussian Discriminant Analysis. Naive Bayes.
+- **Lecture 6:** 6/22 - Laplace Smoothing. Support Vector Machines.
+- **Lecture 7:** 6/24 - Support Vector Machines. Kernels.
+- **Lecture 8:** 6/26 - Bias-Variance tradeoff. Regularization and model/feature selection.
+- **Lecture 9:** 6/28 - Tree Ensembles.
+- **Lecture 10:** 6/30 - Neural Networks: Basics.
+- **Lecture 11:** 7/2 - Neural Networks: Training.
+- **Lecture 12:** 7/4 - Practical Advice for ML projects.
+- **Lecture 13:** 7/6 - K-means. Mixture of Gaussians. Expectation Maximization.
+- **Lecture 14:** 7/8 - Factor Analysis.
+- **Lecture 15:** 7/10 - Principal Component Analysis. Independent Component Analysis.
+- **Lecture 16:** 7/12 - MDPs. Bellman Equations.
+- **Lecture 17:** 7/14 - Value Iteration and Policy Iteration. LQR. LQG.
+- **Lecture 18:** 7/15 - Q-Learning. Value function approximation.
+- **Lecture 19:** 7/16 - Policy Search. REINFORCE. POMDPs.
+- **Lecture 20:** 7/17 - Optional Topic. Wrap-up.
 
 ### Assignment Dates
 
