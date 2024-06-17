@@ -34,12 +34,12 @@ Sources could be found in this [repo](https://github.com/maxim5/cs229-2018-autum
 
 ### Section Dates
 
-- ~~**Section 1:** 6/13 - Linear Algebra~~
-- **Section 2:** 6/16 - Probability
-- **Section 3:** 6/19 - Python
-- **Section 4:** 6/22 - Learning Theory
-- **Section 5:** 6/25 - Evaluation Metrics
-- **Section 6:** 6/28 - Midterm Review
-- **Section 7:** 7/1 - Cancelled
-- **Section 8:** 7/10 - On Critiques of Machine Learning
-- **Section 9:** 7/13 - Convolutional Neural Networks
+- ~~**Section 1:** 6/13~~  Linear Algebra
+- ~~**Section 2:** 6/16~~  Probability
+- **Section 3:** 6/19  Python
+- **Section 4:** 6/22  Learning Theory
+- **Section 5:** 6/25  Evaluation Metrics
+- **Section 6:** 6/28  Midterm Review
+- **Section 7:** 7/1  Cancelled
+- **Section 8:** 7/10  On Critiques of Machine Learning
+- **Section 9:** 7/13  Convolutional Neural Networks
