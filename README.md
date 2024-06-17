@@ -1,5 +1,12 @@
 # CS229 Machine Learning
-This is my own learning schedule (**2024 Summer**) planned for this course. Sources could be found in this [repo](https://github.com/maxim5/cs229-2018-autumn). 
+This is my own learning schedule (**2024 Summer**) planned for this course. 
+
+Useful Links:
+- [maxim5/cs229-2018-autumn](https://github.com/maxim5/cs229-2018-autumn)
+- [2018au Recordings](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
+- [2022sp Recordings](https://www.youtube.com/watch?v=Bl4Feh_Mjvo&list=PLoROMvodv4rNyWOpJg_Yh4NSqI4Z4vOYy)
+- [course official websites](https://cs229.stanford.edu/)
+
 
 ### Lecture Dates
 
