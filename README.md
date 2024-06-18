@@ -43,7 +43,7 @@ This is my learning schedule planned for this course in **2024 Summer**.
 
 - ~~**Section 1:** 6/13~~  Linear Algebra
 - ~~**Section 2:** 6/16~~  Probability
-- **Section 3:** 6/19  Python
+- ~~**Section 3:** 6/19~~  Python
 - **Section 4:** 6/22  Learning Theory
 - **Section 5:** 6/25  Evaluation Metrics
 - **Section 6:** 6/28  Midterm Review
