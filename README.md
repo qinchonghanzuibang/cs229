@@ -4,6 +4,7 @@ This is my learning schedule planned for this course in **2024 Summer**.
 ### Useful Links:
 - [maxim5/cs229-2018-autumn](https://github.com/maxim5/cs229-2018-autumn)
 - [afshinea/stanford-cs-229-machine-learning](https://github.com/afshinea/stanford-cs-229-machine-learning)
+- [ZhouShengsheng/cs229-ps-2018](https://github.com/ZhouShengsheng/cs229-ps-2018)
 - [2018au Recordings](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
 - [2022sp Recordings](https://www.youtube.com/watch?v=Bl4Feh_Mjvo&list=PLoROMvodv4rNyWOpJg_Yh4NSqI4Z4vOYy)
 - [course official websites](https://cs229.stanford.edu/)
