@@ -15,6 +15,11 @@ def main(train_path, eval_path, pred_path):
     x_train, y_train = util.load_dataset(train_path, add_intercept=True)
 
     # *** START CODE HERE ***
+
+    model = LogisticRegression()
+    model.fit(x_train, y_train)
+
+    util.plot(x_train, y_train, model.theta, './output/p01b_plot.png')
     # *** END CODE HERE ***
 
 
@@ -35,6 +40,23 @@ class LogisticRegression(LinearModel):
             y: Training example labels. Shape (m,).
         """
         # *** START CODE HERE ***
+
+        m, n = x.shape  # m is number of training examples, n is number of features
+        self.theta = np.zeros(n)  # initialize theta to zero vector
+
+        while True:
+            theta_prev = np.copy(self.theta)
+            h_theta_x = 1 / (1 + np.exp(-x.dot(self.theta)))
+            H = (np.transpose(x) * h_theta_x * (1 - h_theta_x)).dot(x) / m
+
+            gradient = np.transpose(x).dot(h_theta_x - y) / m
+            H_inverse = np.linalg.inv(H)
+
+            self.theta -= H_inverse.dot(gradient)
+
+            if np.linalg.norm(self.theta - theta_prev, ord=1) < self.eps:
+                break
+
         # *** END CODE HERE ***
 
     def predict(self, x):
@@ -47,4 +69,8 @@ class LogisticRegression(LinearModel):
             Outputs of shape (m,).
         """
         # *** START CODE HERE ***
+
+        result = 1 / (1 + np.exp(-x.dot(self.theta)))
+        return result
+
         # *** END CODE HERE ***
