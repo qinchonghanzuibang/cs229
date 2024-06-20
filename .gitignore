@@ -5,3 +5,9 @@
 **/*.aux
 **/*.log
 **/*.gz
+
+# ignore __pycache__ directory
+__pycache__/
+
+# ignore .idea directory
+.idea/
