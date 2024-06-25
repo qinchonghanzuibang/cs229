@@ -19,7 +19,11 @@ def main(train_path, eval_path, pred_path):
     model = LogisticRegression()
     model.fit(x_train, y_train)
 
-    util.plot(x_train, y_train, model.theta, './output/p01b_plot.png')
+    x_val, y_val = util.load_dataset(eval_path, add_intercept=True)
+    y_pred = model.predict(x_val)
+
+    util.plot(x_val, y_val, model.theta, '{}.png'.format(pred_path))
+    np.savetxt(pred_path, y_pred)
     # *** END CODE HERE ***
 
 
