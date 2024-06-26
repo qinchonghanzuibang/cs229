@@ -15,7 +15,7 @@ This is my learning schedule planned for this course in **2024 Summer**.
 - ~~**Lecture 2:** 6/14~~  Supervised Learning Setup. Linear Regression.
 - ~~**Lecture 3:** 6/16~~  Weighted Least Squares. Logistic Regression.
 - ~~**Lecture 4:** 6/18~~  Newton's Method. Perceptron. Exponential Family. Generalized Linear Models.
-- **Lecture 5:** 6/24  Gaussian Discriminant Analysis. Naive Bayes.
+- ~~**Lecture 5:** 6/24~~  Gaussian Discriminant Analysis. Naive Bayes.
 - **Lecture 6:** 6/26  Laplace Smoothing. Support Vector Machines.
 - **Lecture 7:** 6/28  Support Vector Machines. Kernels.
 - **Lecture 8:** 6/30  Bias-Variance tradeoff. Regularization and model/feature selection.
